@@ -1,9 +1,8 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 
 export default function Input({ label, id, type, name, onKeyUp, format, errorMsg, submitRef}) {
 
     const [error, setError] = useState(true);
-    const searchButtonRef = useRef();
 
     const handleKeyUp = (value) => {
         if(!format.test(value)){
